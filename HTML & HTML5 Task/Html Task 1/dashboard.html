@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <h2>User Dashboard</h2>
+
+    <img src="https://via.placeholder.com/100" alt="Profile Photo"><br><br>
+
+    <p>Email: <span id="email"></span></p>
+    <p>Phone: <span id="phone"></span></p>
+
+    <script>
+        document.getElementById("email").innerText = localStorage.getItem("email");
+        document.getElementById("phone").innerText = localStorage.getItem("phone");
+    </script>
+
+</body>
+</html>

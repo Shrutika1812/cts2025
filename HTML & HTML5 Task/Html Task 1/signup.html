@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <h2>Sign Up</h2>
+
+    <input type="text" id="fname" placeholder="First Name"><br><br>
+    <input type="text" id="lname" placeholder="Last Name"><br><br>
+    <input type="email" id="email" placeholder="Email"><br><br>
+    <input type="text" id="phone" placeholder="Phone Number"><br><br>
+
+    <button onclick="register()">Register</button>
+
+    <script>
+        function register() {
+            localStorage.setItem("firstName", document.getElementById("fname").value);
+            localStorage.setItem("lastName", document.getElementById("lname").value);
+            localStorage.setItem("email", document.getElementById("email").value);
+            localStorage.setItem("phone", document.getElementById("phone").value);
+
+            alert("Registration Successful");
+            window.location.href = "signin.html";
+        }
+    </script>
+
+</body>
+</html>

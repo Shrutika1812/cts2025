@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In</title>
+</head>
+<body>
+
+    <h2>Sign In</h2>
+
+    <input type="email" id="email" placeholder="Email"><br><br>
+
+    <button onclick="login()">Login</button>
+
+    <script>
+        function login() {
+            var storedEmail = localStorage.getItem("email");
+            var enteredEmail = document.getElementById("email").value;
+
+            if (storedEmail === enteredEmail) {
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid Email");
+            }
+        }
+    </script>
+
+</body>
+</html>
